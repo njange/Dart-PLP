@@ -15,4 +15,14 @@ print("The statement is $isTrue");
 
 List<String> names = ["John", "Doe", "Smith"];
 print(names[0]);
+
+Map<String, int> marks = {
+  "John": 100,
+  "Doe": 90,
+  "Smith": 80
+};
+print(marks["John"]);
+
+String runesString = '\u{1f605}';
+print(runesString);
 }
