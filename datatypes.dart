@@ -4,4 +4,6 @@ void main(){
     "Doe": 90,
     "Smith": 80
   };
+
+  print(marks["John"]);
 }
