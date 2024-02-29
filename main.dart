@@ -9,4 +9,7 @@ void main() {
   double height = 6.2;
 
   print("My name is $name. I am $age years old and $height feet tall");
+
+bool isTrue = true;
+print("The statement is $isTrue");
 }
