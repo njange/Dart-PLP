@@ -12,4 +12,7 @@ void main() {
 
 bool isTrue = true;
 print("The statement is $isTrue");
+
+List<String> names = ["John", "Doe", "Smith"];
+print(names[0]);
 }
