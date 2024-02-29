@@ -1,0 +1,14 @@
+import 'dart:io';
+
+void main() {
+  
+  print('Enter your year of birth:');
+  int yearOfBirth = int.parse(stdin.readLineSync()!);
+
+  int currentYear = DateTime.now().year;
+
+
+  int ageInDays = (currentYear - yearOfBirth) * 365;
+
+  print('Your age is approximately $ageInDays days.');
+}
