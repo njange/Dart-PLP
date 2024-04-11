@@ -28,39 +28,61 @@ void play(List gamedashboard, String player) {
     } else {
       print("This box is already taken. Try again");
       play(gamedashboard, player);
-  }
+    }
   } else {
     print("Invalid input. Try again");
     play(gamedashboard, player);
-  }  
+  }
 }
 
 void checkWinner(List gamedashboard, String player) {
   displayGameDashboard(gamedashboard);
-  if (gamedashboard[0][0] == player && 
-  gamedashboard[0][1] == player && 
-  gamedashboard[0][2] && 
-  gamedashboard[0][0].toString().isNotEmpty) {
+  if (gamedashboard[0][0] == player &&
+      gamedashboard[0][1] == player &&
+      gamedashboard[0][2] &&
+      gamedashboard[0][0].toString().isNotEmpty) {
     displaywinner(player);
-  } else if (gamedashboard[1][0] == player && 
-  gamedashboard[1][1] == player && 
-  gamedashboard[1][2] && 
-  gamedashboard[1][0].toString().isNotEmpty) {
+  } else if (gamedashboard[1][0] == player &&
+      gamedashboard[1][1] == player &&
+      gamedashboard[1][2] &&
+      gamedashboard[1][0].toString().isNotEmpty) {
     displaywinner(player);
   } else if (gamedashboard[2][0] == player &&
-  gamedashboard[2][1] == player &&
-  gamedashboard[2][2] &&
-  gamedashboard[2][0].toString().isNotEmpty) {
+      gamedashboard[2][1] == player &&
+      gamedashboard[2][2] &&
+      gamedashboard[2][0].toString().isNotEmpty) {
     displaywinner(player);
   } else if (gamedashboard[0][0] == player &&
-  gamedashboard[1][0] == player &&
-  gamedashboard[2][0] &&
-  gamedashboard[0][0].toString().isNotEmpty) {
+      gamedashboard[1][0] == player &&
+      gamedashboard[2][0] &&
+      gamedashboard[0][0].toString().isNotEmpty) {
     displaywinner(player);
   } else if (gamedashboard[0][1] == player &&
-  gamedashboard[1][1] == player &&
-  gamedashboard[2][1] &&
-  gamedashboard[0][1].toString().isNotEmpty) {
+      gamedashboard[1][1] == player &&
+      gamedashboard[2][1] &&
+      gamedashboard[0][1].toString().isNotEmpty) {
     displaywinner(player);
   } else if (gamedashboard[0][2] == player &&
+      gamedashboard[1][2] == player &&
+      gamedashboard[2][2] &&
+      gamedashboard[0][2].toString().isNotEmpty) {
+    displaywinner(player);
+  } else if (gamedashboard[0][0] == player &&
+      gamedashboard[1][1] == player &&
+      gamedashboard[2][2] &&
+      gamedashboard[0][0].toString().isNotEmpty) {
+    displaywinner(player);
+  } else if (gamedashboard[0][2] == player &&
+      gamedashboard[1][1] == player &&
+      gamedashboard[2][0] &&
+      gamedashboard[0][2].toString().isNotEmpty) {
+    displaywinner(player);
+  } else {
+    if (player == "X") {
+      play(gamedashboard, "O");
+    } else {
+      play(gamedashboard, "X");
+    }
   }
+  
+}
