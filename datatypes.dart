@@ -7,17 +7,26 @@ void main() {
   ];
   displayGameDashboard(gamedashboard);
 }
-void displayGameDashboard(List gamedashboard){
-  print(
-    "${gamedashboard[0][0] | gamedashboard[0][1] | gamedashboard[0][2]}");
+
+void displayGameDashboard(List gamedashboard) {
+  print("${gamedashboard[0][0] | gamedashboard[0][1] | gamedashboard[0][2]}");
   print("-----");
-  print(
-    "${gamedashboard[1][0] | gamedashboard[1][1] | gamedashboard[1][2]}");
+  print("${gamedashboard[1][0] | gamedashboard[1][1] | gamedashboard[1][2]}");
   print("-----");
-  print(
-    "${gamedashboard[2][0] | gamedashboard[2][1] | gamedashboard[2][2]}");
+  print("${gamedashboard[2][0] | gamedashboard[2][1] | gamedashboard[2][2]}");
 }
 
-void play(List gamedashboard, String player){
+void play(List gamedashboard, String player) {
   print("Player $player, make your move");
-  
+  var box = int.tryParse(stdin.readLineSync()!);
+  if (box != null && box > 1 && box < 9) {
+    var row = (box - 1) ~/ 3; //calculate row
+    var col = (box - 1) % 3; //calculate column
+    if (gamedashboard[row][col] == " ") {
+      gamedashboard[row][col] = player;
+      checkwinner(gamedashboard, player);
+    } else {
+      print("This box is already taken. Try again");
+      play(gamedashboard, player);
+  }
+}
