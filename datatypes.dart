@@ -1,9 +1,13 @@
-void main(){
-  Map<String, int> marks = {
-    "John": 100,
-    "Doe": 90,
-    "Smith": 80
-  };
-
-  print(marks["John"]);
+void main() {
+  String player = "X";
+  var gamedashboard = [
+    [" ", " ", " "],
+    [" ", " ", " "],
+    [" ", " ", " "]
+  ];
+  displayGameDashboard(gamedashboard);
 }
+void displayGameDashboard(List gamedashboard){
+  print("${gamedashboard[0][0]} }")
+}
+
