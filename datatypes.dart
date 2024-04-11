@@ -18,3 +18,6 @@ void displayGameDashboard(List gamedashboard){
     "${gamedashboard[2][0] | gamedashboard[2][1] | gamedashboard[2][2]}");
 }
 
+void play(List gamedashboard, String player){
+  print("Player $player, make your move");
+  
