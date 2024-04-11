@@ -1,12 +1,15 @@
+import 'dart:io';
 void main() {
-  String player = "X";
+  // Remove the unused variable 'player'
   var gamedashboard = [
     [" ", " ", " "],
     [" ", " ", " "],
     [" ", " ", " "]
   ];
   displayGameDashboard(gamedashboard);
+  play(gamedashboard, "X");
 }
+
 
 void displayGameDashboard(List gamedashboard) {
   print("${gamedashboard[0][0] | gamedashboard[0][1] | gamedashboard[0][2]}");
@@ -24,7 +27,7 @@ void play(List gamedashboard, String player) {
     var col = (box - 1) % 3; //calculate column
     if (gamedashboard[row][col] == " ") {
       gamedashboard[row][col] = player;
-      checkwinner(gamedashboard, player);
+      checkWinner(gamedashboard, player);
     } else {
       print("This box is already taken. Try again");
       play(gamedashboard, player);
@@ -36,6 +39,10 @@ void play(List gamedashboard, String player) {
 }
 
 void checkWinner(List gamedashboard, String player) {
+     void displaywinner(String player) {
+      displayGameDashboard(gamedashboard);
+      print("Player $player wins!");
+    }
   displayGameDashboard(gamedashboard);
   if (gamedashboard[0][0] == player &&
       gamedashboard[0][1] == player &&
@@ -84,5 +91,6 @@ void checkWinner(List gamedashboard, String player) {
       play(gamedashboard, "X");
     }
   }
-  
+
 }
+
