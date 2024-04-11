@@ -13,10 +13,10 @@ void main() async {
 
   print("End of main - User data: $result");
 
-
-  Future<String> fetchUserDataRenamed() {
-    return Future.delayed(Duration(seconds: 3), () {
-      return "John Doe";
-    });
-  }
+  // Future<String> fetchUserDataRenamed() {
+  //   return Future.delayed(Duration(seconds: 3), () {
+  //     return "John Doe";
+  //   });
+  // }
 }
+
